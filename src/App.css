@@ -1,38 +1,90 @@
 .App {
-  text-align: center;
+  padding: 3rem 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile__section {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 10rem;
+  padding: 3rem;
+}
+
+.profile__img img {
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+}
+
+.profile__name {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.profile__description-header,
+.profile__options {
+  display: flex;
+  gap: 2rem;
+}
+
+.profile__options {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.profile__description-cta,
+.profile__description-statistics {
+  margin-top: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile__description-statistics {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.profile__description-statistics span {
+  margin: 0 0.2rem;
+}
+
+section {
+  margin-top: 5rem;
+}
+
+.profile__posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  column-gap: 3rem;
+  row-gap: 3rem;
+}
+
+.profile__posts .post {
+  width: 100%;
+  position: relative;
+}
+
+.profile__posts img:hover {
+  filter: brightness(50%);
+}
+
+.post img:hover + .post__actions {
+  display: flex;
+}
+
+.post .post__actions {
+  position: absolute;
+  top: 50%;
+  /* right: 5%; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  display: none;
 }
